@@ -1,21 +1,35 @@
-function realizarOperacion(operacion) {
-    var num1 = parseFloat(document.getElementById("numero1").value);
-    var num2 = parseFloat(document.getElementById("numero2").value);
-    var resul;
+// Función para sumar
+function sumar() {
+    var num1 = parseFloat(document.getElementById('num1').value);
+    var num2 = parseFloat(document.getElementById('num2').value);
+    var resultado = num1 + num2;
+    document.getElementById('resultado').value = resultado;
+}
 
-    if (operacion === '+') {
-        resul = num1 + num2;
-    } else if (operacion === '-') {
-        resul = num1 - num2;
-    } else if (operacion === '*') {
-        resul = num1 * num2;
-    } else if (operacion === '/') {
-        if (num2 !== 0) {
-            resul = num1 / num2;
-        } else {
-            resul = "Error: División por 0";
-        }
+// Función para restar
+function restar() {
+    var num1 = parseFloat(document.getElementById('num1').value);
+    var num2 = parseFloat(document.getElementById('num2').value);
+    var resultado = num1 - num2;
+    document.getElementById('resultado').value = resultado;
+}
+
+// Función para multiplicar
+function multiplicar() {
+    var num1 = parseFloat(document.getElementById('num1').value);
+    var num2 = parseFloat(document.getElementById('num2').value);
+    var resultado = num1 * num2;
+    document.getElementById('resultado').value = resultado;
+}
+
+// Función para dividir
+function dividir() {
+    var num1 = parseFloat(document.getElementById('num1').value);
+    var num2 = parseFloat(document.getElementById('num2').value);
+    if (num2 !== 0) {
+        var resultado = num1 / num2;
+        document.getElementById('resultado').value = resultado;
+    } else {
+        document.getElementById('resultado').value = "Error: División por cero";
     }
-
-    document.getElementById("resultado: ").value = resul;
 }
